@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Today's Toby Fox song is</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    #toby-button {
+      font-family: "Undertale", sans-serif;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translate(-50%, -100px);
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+      padding: 12px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      transition:
+        transform 0.75s cubic-bezier(0.87, 0, 0.13, 1),
+        opacity 0.75s cubic-bezier(0.87, 0, 0.13, 1),
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+      opacity: 0;
+      user-select: none;
+      z-index: 1000;
+      border-radius: 5px;
+    }
+
+    #toby-button.show {
+      transform: translate(-50%, -50px);
+      opacity: 1;
+    }
+
+    #toby-button:hover,
+    #toby-button:focus {
+      background-color: white;
+      color: black;
+      border-color: black;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <img id="logo" src="assets/annoyingDog.gif" alt="Annoying Dog" />
+  <div id="title">Today's Toby Fox song is:</div>
+  <div id="reveal-box"></div>
+  <div id="song-name"></div>
+
+  <a
+    id="toby-button"
+    href="https://en.wikipedia.org/wiki/Toby_Fox"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Who is Toby Fox?
+  </a>
+
+  <div id="footer-text">
+    Made by <a href="https://github.com/santiagocalebe">Santiago</a><br />
+    This is a fan project and not affiliated with Toby Fox or Undertale / Deltarune TEAM, all rights to Toby Fox | © Toby Fox.
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const btn = document.getElementById('toby-button');
+      setTimeout(() => {
+        btn.classList.add('show');
+      }, 100);
+    });
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

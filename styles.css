@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Undertale';
+  src: url('../assets/fonts/Undertale.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: 'Undertale', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  font-size: 32px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+#reveal-box {
+  width: 320px;
+  height: 30px;
+  margin-top: -20px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  user-select: none;
+  color: transparent;
+}
+
+#reveal-box.hidden {
+  display: none;
+}
+
+#song-name {
+  font-size: 64px;
+  margin-top: 10px;
+  color: rgb(255, 191, 0);
+  visibility: hidden;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+  white-space: pre-line;
+  text-align: center;
+}
+
+#song-name.visible {
+  visibility: visible;
+  margin-top: -50px;
+  background:#ffd000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+}
+
+#logo {
+  display: block;
+  margin: 0 auto 0 auto;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  height: 5vh;
+}
+
+#footer-text {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #090909;
+  color: white;
+  font-size: 14px;
+}

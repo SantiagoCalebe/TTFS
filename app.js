@@ -23,6 +23,17 @@ function getSongOfTheDay(songs) {
       };
     }
   }
+
+  if (day === 11 && month === 10) {
+    let song = selectSpecialSong(songs, "Dogsong");
+    
+    if (song) {
+      return {
+        song: song,
+        message: "Today is Toby Fox's birthday! <br> (Dog Song)" 
+      };
+    }
+  }  
   
   if (day === 14 && month === 2) {
     let song = selectSpecialSong(songs, "Pushing Buddies");

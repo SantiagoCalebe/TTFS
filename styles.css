@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Undertale';
-  src: url('../assets/fonts/Undertale.ttf') format('truetype');
+  src: url('assets/fonts/Undertale.ttf') format('truetype');
 }
 
 body {
